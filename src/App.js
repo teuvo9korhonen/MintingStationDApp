@@ -63,12 +63,12 @@ function App() {
     if (_amount <= 0) {
       return;
     }
-    setFeedback("Preparing your Twee the Bee NFT...");
+    setFeedback("preparing your tokens...");
     setClaimingNft(true);
     blockchain.smartContract.methods
       .mint(blockchain.account, _amount)
       .send({
-        gasLimit: "285000",
+        gasLimit: "600000",
         to: "0x688db0131c807a3495c23bc1b25726a76ea31f49",
         from: blockchain.account,
         value: blockchain.web3.utils.toWei((.02 * _amount).toString(), "ether"),
@@ -80,7 +80,7 @@ function App() {
       })
       .then((receipt) => {
         setFeedback(
-          "Woohoo! You just helped save the Bees! Visit Opensea.io to view your randomly generated NFT!"
+          "rosens are yours now"
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -103,7 +103,7 @@ function App() {
         <s.TextTitle
           style={{ textAlign: "center", fontSize: 36, fontWeight: "bold" }}
         >
-          The Bee Collaborative NFT Hive
+          rosenart
           
         </s.TextTitle>
         <s.SpacerMedium />
@@ -114,7 +114,7 @@ function App() {
             <s.TextTitle
               style={{ textAlign: "center", fontSize: 26, fontWeight: "bold" }}
             >
-              {data.totalSupply}/10000
+              {data.totalSupply}/1500
             </s.TextTitle>
           </s.Container>
           <s.SpacerMedium />
@@ -124,7 +124,7 @@ function App() {
             ai={"center"}
             style={{ backgroundColor: "#000000", padding: 12 }}
           >
-            {Number(data.totalSupply) == 10000 ? (
+            {Number(data.totalSupply) == 1500 ? (
               <>
                 <s.TextTitle style={{ textAlign: "center" }}>
                   The sale has ended.
@@ -134,7 +134,7 @@ function App() {
                   You can still buy and trade TBC NFTs on{" "}
                   <a
                     target={""}
-                    href={"https://opensea.io/collection/the-bee-collaborative"}
+                    href={"https://opensea.io/collection/..."}
                   >
                     Opensea.io
                   </a>
@@ -143,11 +143,10 @@ function App() {
             ) : (
               <>
                 <s.TextTitle style={{ textAlign: "center" }}>
-                  1 Bee NFT costs .02 ETH
+                  1 rosen NFT costs .08 ETH
                 </s.TextTitle>
                 <s.SpacerXSmall />
-                <s.TextDescription style={{ textAlign: "center" }}>
-                  -excluding gas fee-
+                <s.TextDescription style={{ textAlign: "center" }}
                 </s.TextDescription>
                 <s.SpacerLarge />
                 <s.SpacerSmall />
@@ -201,11 +200,10 @@ function App() {
         <s.SpacerSmall />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
           <s.TextDescription style={{ textAlign: "center", fontSize: 18 }}>
-            50% of all proceeds go towards Charity and adding Liquidity to TBC Token
+            a true artist is not one who is inspired, but one who inspires others ―  Salvador Dali
           </s.TextDescription>
           <s.SpacerSmall />
-          <s.TextDescription style={{ textAlign: "center", fontSize: 14 }}>
-            Bee Rewarded to help Save the Bees #TBCToken<p/>*.*.*Launching_Soon*.*.*
+          <s.TextDescription style={{ textAlign: "center", fontSize: 14 }}
           </s.TextDescription>
         </s.Container>
       </s.Container>
