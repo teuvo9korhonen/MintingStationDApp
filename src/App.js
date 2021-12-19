@@ -56,7 +56,7 @@ function App() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
-  const [feedback, setFeedback] = useState("What Personality will your Bee have?");
+  const [feedback, setFeedback] = useState("follow the white rabbit");
   const [claimingNft, setClaimingNft] = useState(false);
 
   const claimNFTs = (_amount) => {
@@ -103,7 +103,7 @@ function App() {
         <s.TextTitle
           style={{ textAlign: "center", fontSize: 36, fontWeight: "bold" }}
         >
-          The Bee Collaborative NFT Minting Hive
+          The Bee Collaborative NFT Hive
           
         </s.TextTitle>
         <s.SpacerMedium />
